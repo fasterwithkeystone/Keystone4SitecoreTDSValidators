@@ -16,4 +16,4 @@ The sample validators in this solution include:
 - workflow has an initial and final state
 - template has no presentation details
 - template has presentation details
-- template has no diret fields (want to force inheritance)
+- template has no direct fields (want to force inheritance)
