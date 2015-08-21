@@ -5,7 +5,7 @@ For more information on Keystone for Sitecore please see our website http://www.
 
 1. Download the solution.
 2. Update the references for your version of TDS
-3. Build the solutio
+3. Build the solution
 3. Deploy the resulting DLLs to your TDS directory (C:\Program Files (x86)\MSBuild\HedgehogDevelopment\SitecoreProject\v9.0.)
 
 The sample validators in this solution include:
