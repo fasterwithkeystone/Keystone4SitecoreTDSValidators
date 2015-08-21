@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30391D91-3EA7-4692-AEBC-6F8DCBC5B84A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Keystone.BestPractices</RootNamespace>
+    <AssemblyName>Keystone.BestPractices</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HedgehogDevelopment.SitecoreCommon.Data">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Hedgehog Development\Team Development for Sitecore (VS2012)\HedgehogDevelopment.SitecoreCommon.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="HedgehogDevelopment.SitecoreCommon.Data.Parser">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Hedgehog Development\Team Development for Sitecore (VS2012)\HedgehogDevelopment.SitecoreCommon.Data.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="HedgehogDevelopment.SitecoreProject.Tasks">
+      <HintPath>..\..\..\..\..\Program Files (x86)\MSBuild\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TDS\Validators\Layout\Sublayouts\CacheVaryByDataRequired.cs" />
+    <Compile Include="TDS\Validators\Layout\Sublayouts\CacheVaryByParamRequired.cs" />
+    <Compile Include="TDS\Validators\Layout\Sublayouts\EditableWithDatasourceRequired.cs" />
+    <Compile Include="TDS\Validators\Layout\Sublayouts\DatasourceLocationRequired.cs" />
+    <Compile Include="TDS\Validators\Layout\Sublayouts\DatasourceTemplateRequired.cs" />
+    <Compile Include="TDS\Validators\System\Workflow\FinalState.cs" />
+    <Compile Include="TDS\Validators\System\Workflow\InitialState.cs" />
+    <Compile Include="TDS\Validators\Templates\FieldsNotPermitted.cs" />
+    <Compile Include="TDS\Validators\Templates\PresentationRequired.cs" />
+    <Compile Include="TDS\Validators\Templates\PresentationNotPermitted.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
